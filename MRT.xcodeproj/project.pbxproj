@@ -12,6 +12,8 @@
 		20C4FC9C1CD8A2FC00A2985B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C4FC9B1CD8A2FC00A2985B /* Assets.xcassets */; };
 		20C4FC9F1CD8A2FC00A2985B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C4FC9D1CD8A2FC00A2985B /* LaunchScreen.storyboard */; };
 		20C4FCB51CD8B26B00A2985B /* MRTStationsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4FCB41CD8B26B00A2985B /* MRTStationsListTableViewController.swift */; };
+		20CFD0C21CE1261000E3BCB7 /* MRTStationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFD0C11CE1261000E3BCB7 /* MRTStationData.swift */; };
+		20CFD0C41CE13F3400E3BCB7 /* MRT.json in Resources */ = {isa = PBXBuildFile; fileRef = 20CFD0C31CE13F3400E3BCB7 /* MRT.json */; };
 		E8AD4EDAFC16AC8A5F44B363 /* Pods_MRT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0D2DA6BBF9600479CC28CC /* Pods_MRT.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		20C4FCA01CD8A2FC00A2985B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C4FCA51CD8A2FC00A2985B /* MRTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C4FCB41CD8B26B00A2985B /* MRTStationsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTStationsListTableViewController.swift; sourceTree = "<group>"; };
+		20CFD0C11CE1261000E3BCB7 /* MRTStationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTStationData.swift; sourceTree = "<group>"; };
+		20CFD0C31CE13F3400E3BCB7 /* MRT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MRT.json; path = MRT/MRT.json; sourceTree = "<group>"; };
 		AEBEC23F9309ADD8A3D94077 /* Pods-MRT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRT.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRT/Pods-MRT.release.xcconfig"; sourceTree = "<group>"; };
 		F757C5E0575CD8932CAE89DE /* Pods-MRT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRT/Pods-MRT.debug.xcconfig"; sourceTree = "<group>"; };
 		FF0D2DA6BBF9600479CC28CC /* Pods_MRT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		208648A91CE46B7A001F7253 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				20CFD0C31CE13F3400E3BCB7 /* MRT.json */,
+			);
+			name = Data;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		20C4FC881CD8A2FC00A2985B = {
 			isa = PBXGroup;
 			children = (
@@ -88,12 +101,14 @@
 		20C4FC931CD8A2FC00A2985B /* MRT */ = {
 			isa = PBXGroup;
 			children = (
+				208648A91CE46B7A001F7253 /* Data */,
 				20C4FC941CD8A2FC00A2985B /* AppDelegate.swift */,
 				20C4FC981CD8A2FC00A2985B /* Main.storyboard */,
 				20C4FC9B1CD8A2FC00A2985B /* Assets.xcassets */,
 				20C4FC9D1CD8A2FC00A2985B /* LaunchScreen.storyboard */,
 				20C4FCA01CD8A2FC00A2985B /* Info.plist */,
 				20C4FCB41CD8B26B00A2985B /* MRTStationsListTableViewController.swift */,
+				20CFD0C11CE1261000E3BCB7 /* MRTStationData.swift */,
 			);
 			path = MRT;
 			sourceTree = "<group>";
@@ -160,6 +175,7 @@
 				TargetAttributes = {
 					20C4FC901CD8A2FC00A2985B = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = J9LG79C42K;
 					};
 					20C4FCA41CD8A2FC00A2985B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -194,6 +210,7 @@
 				20C4FC9F1CD8A2FC00A2985B /* LaunchScreen.storyboard in Resources */,
 				20C4FC9C1CD8A2FC00A2985B /* Assets.xcassets in Resources */,
 				20C4FC9A1CD8A2FC00A2985B /* Main.storyboard in Resources */,
+				20CFD0C41CE13F3400E3BCB7 /* MRT.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +278,7 @@
 			files = (
 				20C4FCB51CD8B26B00A2985B /* MRTStationsListTableViewController.swift in Sources */,
 				20C4FC951CD8A2FC00A2985B /* AppDelegate.swift in Sources */,
+				20CFD0C21CE1261000E3BCB7 /* MRTStationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

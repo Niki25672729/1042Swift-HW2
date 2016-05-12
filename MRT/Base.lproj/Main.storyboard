@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wlf-fK-6jx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wlf-fK-6jx">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,43 +23,39 @@
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-0F-13z">
-                                            <rect key="frame" x="17" y="0.0" width="407" height="44"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-0F-13z">
+                                            <rect key="frame" x="17" y="0.0" width="31.5" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BR24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGB-8E-pfe">
-                                            <rect key="frame" x="490" y="7" width="68" height="29"/>
+                                            <rect key="frame" x="500" y="8" width="58" height="26"/>
                                             <color key="backgroundColor" red="0.61960784313725492" green="0.396078431372549" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="29" id="YhY-uX-04V"/>
-                                                <constraint firstAttribute="width" constant="68" id="irz-qa-JPO"/>
+                                                <constraint firstAttribute="height" constant="26" id="YhY-uX-04V"/>
+                                                <constraint firstAttribute="width" constant="58" id="irz-qa-JPO"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="8"/>
+                                                    <integer key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BL23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-7S-nbf">
-                                            <rect key="frame" x="417" y="7" width="68" height="29"/>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BL23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-7S-nbf">
+                                            <rect key="frame" x="437" y="8" width="58" height="26"/>
                                             <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="68" id="4ru-4i-n9x"/>
-                                                <constraint firstAttribute="height" constant="29" id="lFf-Xn-L31"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="8"/>
+                                                    <integer key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
@@ -69,10 +65,12 @@
                                         <constraint firstItem="H9E-0F-13z" firstAttribute="leading" secondItem="nwm-jS-2CM" secondAttribute="leadingMargin" constant="9" id="5tD-60-zXM"/>
                                         <constraint firstItem="bdb-7S-nbf" firstAttribute="centerY" secondItem="nwm-jS-2CM" secondAttribute="centerY" id="Aht-dP-uMP"/>
                                         <constraint firstItem="TGB-8E-pfe" firstAttribute="leading" secondItem="bdb-7S-nbf" secondAttribute="trailing" constant="5" id="Bq2-GX-n0g" userLabel="BR24.leading = BL23.trailing + 4"/>
+                                        <constraint firstItem="TGB-8E-pfe" firstAttribute="width" secondItem="bdb-7S-nbf" secondAttribute="width" id="YUY-UJ-zTp"/>
                                         <constraint firstItem="H9E-0F-13z" firstAttribute="centerY" secondItem="nwm-jS-2CM" secondAttribute="centerY" id="aMy-0A-mGm"/>
                                         <constraint firstItem="TGB-8E-pfe" firstAttribute="trailing" secondItem="nwm-jS-2CM" secondAttribute="trailingMargin" constant="-1" id="bXl-ce-ctl"/>
                                         <constraint firstItem="H9E-0F-13z" firstAttribute="bottom" secondItem="nwm-jS-2CM" secondAttribute="bottom" id="wb9-Wd-2bi"/>
                                         <constraint firstItem="H9E-0F-13z" firstAttribute="top" secondItem="nwm-jS-2CM" secondAttribute="top" id="xCw-wH-PTz"/>
+                                        <constraint firstItem="TGB-8E-pfe" firstAttribute="height" secondItem="bdb-7S-nbf" secondAttribute="height" id="yfc-aY-5hV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="StationNameCell"/>
@@ -81,6 +79,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="d2Q-ch-kyx" id="DDj-Cj-qYk"/>
                             <outlet property="delegate" destination="d2Q-ch-kyx" id="bwq-hO-O1O"/>
@@ -107,6 +106,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中和新蘆線" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuK-9y-RSX">
                                 <rect key="frame" x="0.0" y="193" width="300" height="66"/>
                                 <color key="backgroundColor" red="1" green="0.63921568627450975" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Gez-Sw-Hae"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -116,12 +118,6 @@
                                 <color key="backgroundColor" red="0.79607843137254897" green="0.17254901960784313" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlj-Qu-DEW">
-                                <rect key="frame" x="279" y="290" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東門" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-mo-kbh">
@@ -149,7 +145,6 @@
                             <constraint firstItem="IVa-Dg-HnD" firstAttribute="leading" secondItem="xt6-b3-auq" secondAttribute="leading" id="HVc-1o-frD"/>
                             <constraint firstItem="IVa-Dg-HnD" firstAttribute="baseline" secondItem="MZz-RN-aif" secondAttribute="baseline" id="Oky-8q-6kR"/>
                             <constraint firstItem="nuK-9y-RSX" firstAttribute="leading" secondItem="xt6-b3-auq" secondAttribute="leading" id="QZ4-Tt-wux"/>
-                            <constraint firstItem="nuK-9y-RSX" firstAttribute="bottom" secondItem="Ieb-sU-Za1" secondAttribute="top" constant="-341" id="blL-5c-SHC"/>
                             <constraint firstItem="MZz-RN-aif" firstAttribute="width" secondItem="nuK-9y-RSX" secondAttribute="width" id="bnC-Sq-Qpm"/>
                             <constraint firstItem="IVa-Dg-HnD" firstAttribute="firstBaseline" secondItem="MZz-RN-aif" secondAttribute="firstBaseline" id="eAA-5V-Czx"/>
                             <constraint firstAttribute="trailing" secondItem="IVa-Dg-HnD" secondAttribute="trailing" id="hcM-md-ARg"/>
@@ -159,11 +154,6 @@
                             <constraint firstItem="MZz-RN-aif" firstAttribute="trailing" secondItem="xt6-b3-auq" secondAttribute="trailing" id="rap-vi-fM1"/>
                             <constraint firstItem="MZz-RN-aif" firstAttribute="leading" secondItem="nuK-9y-RSX" secondAttribute="trailing" id="y7K-fN-2Vg"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="mlj-Qu-DEW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="東門" id="HcF-2S-UZ5"/>
                 </viewController>
