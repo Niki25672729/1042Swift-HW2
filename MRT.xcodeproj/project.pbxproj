@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		208785F91CE5B5EE00311E43 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208785F81CE5B5EE00311E43 /* MyTableViewCell.swift */; };
+		208785FB1CE5C86F00311E43 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208785FA1CE5C86F00311E43 /* StationDetailViewController.swift */; };
 		20C4FC951CD8A2FC00A2985B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4FC941CD8A2FC00A2985B /* AppDelegate.swift */; };
-		20C4FC9A1CD8A2FC00A2985B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C4FC981CD8A2FC00A2985B /* Main.storyboard */; };
 		20C4FC9C1CD8A2FC00A2985B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C4FC9B1CD8A2FC00A2985B /* Assets.xcassets */; };
 		20C4FC9F1CD8A2FC00A2985B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C4FC9D1CD8A2FC00A2985B /* LaunchScreen.storyboard */; };
 		20C4FCB51CD8B26B00A2985B /* MRTStationsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4FCB41CD8B26B00A2985B /* MRTStationsListTableViewController.swift */; };
 		20CFD0C21CE1261000E3BCB7 /* MRTStationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFD0C11CE1261000E3BCB7 /* MRTStationData.swift */; };
 		20CFD0C41CE13F3400E3BCB7 /* MRT.json in Resources */ = {isa = PBXBuildFile; fileRef = 20CFD0C31CE13F3400E3BCB7 /* MRT.json */; };
+		20FCCF261CE5CFC4006DC5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FCCF241CE5CFC4006DC5E1 /* Main.storyboard */; };
 		E8AD4EDAFC16AC8A5F44B363 /* Pods_MRT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0D2DA6BBF9600479CC28CC /* Pods_MRT.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		208785F81CE5B5EE00311E43 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		208785FA1CE5C86F00311E43 /* StationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 		20C4FC911CD8A2FC00A2985B /* MRT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C4FC941CD8A2FC00A2985B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20C4FC991CD8A2FC00A2985B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20C4FC9B1CD8A2FC00A2985B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20C4FC9E1CD8A2FC00A2985B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20C4FCA01CD8A2FC00A2985B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		20C4FCB41CD8B26B00A2985B /* MRTStationsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTStationsListTableViewController.swift; sourceTree = "<group>"; };
 		20CFD0C11CE1261000E3BCB7 /* MRTStationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTStationData.swift; sourceTree = "<group>"; };
 		20CFD0C31CE13F3400E3BCB7 /* MRT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MRT.json; path = MRT/MRT.json; sourceTree = "<group>"; };
+		20FCCF251CE5CFC4006DC5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEBEC23F9309ADD8A3D94077 /* Pods-MRT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRT.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRT/Pods-MRT.release.xcconfig"; sourceTree = "<group>"; };
 		F757C5E0575CD8932CAE89DE /* Pods-MRT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRT/Pods-MRT.debug.xcconfig"; sourceTree = "<group>"; };
 		FF0D2DA6BBF9600479CC28CC /* Pods_MRT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,12 +107,14 @@
 			children = (
 				208648A91CE46B7A001F7253 /* Data */,
 				20C4FC941CD8A2FC00A2985B /* AppDelegate.swift */,
-				20C4FC981CD8A2FC00A2985B /* Main.storyboard */,
 				20C4FC9B1CD8A2FC00A2985B /* Assets.xcassets */,
+				20FCCF241CE5CFC4006DC5E1 /* Main.storyboard */,
 				20C4FC9D1CD8A2FC00A2985B /* LaunchScreen.storyboard */,
 				20C4FCA01CD8A2FC00A2985B /* Info.plist */,
 				20C4FCB41CD8B26B00A2985B /* MRTStationsListTableViewController.swift */,
 				20CFD0C11CE1261000E3BCB7 /* MRTStationData.swift */,
+				208785F81CE5B5EE00311E43 /* MyTableViewCell.swift */,
+				208785FA1CE5C86F00311E43 /* StationDetailViewController.swift */,
 			);
 			path = MRT;
 			sourceTree = "<group>";
@@ -209,8 +215,8 @@
 			files = (
 				20C4FC9F1CD8A2FC00A2985B /* LaunchScreen.storyboard in Resources */,
 				20C4FC9C1CD8A2FC00A2985B /* Assets.xcassets in Resources */,
-				20C4FC9A1CD8A2FC00A2985B /* Main.storyboard in Resources */,
 				20CFD0C41CE13F3400E3BCB7 /* MRT.json in Resources */,
+				20FCCF261CE5CFC4006DC5E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C4FCB51CD8B26B00A2985B /* MRTStationsListTableViewController.swift in Sources */,
+				208785F91CE5B5EE00311E43 /* MyTableViewCell.swift in Sources */,
 				20C4FC951CD8A2FC00A2985B /* AppDelegate.swift in Sources */,
 				20CFD0C21CE1261000E3BCB7 /* MRTStationData.swift in Sources */,
+				208785FB1CE5C86F00311E43 /* StationDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,20 +308,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		20C4FC981CD8A2FC00A2985B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20C4FC991CD8A2FC00A2985B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		20C4FC9D1CD8A2FC00A2985B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				20C4FC9E1CD8A2FC00A2985B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		20FCCF241CE5CFC4006DC5E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20FCCF251CE5CFC4006DC5E1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

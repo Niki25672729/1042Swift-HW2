@@ -12,6 +12,30 @@ class MRTStationsListTableViewController: UITableViewController {
     
     var MRTStationsData: MRTStationSource!
     
+    func LabelColor(LabelName: String, CellLabel: UILabel) -> Void {
+        switch LabelName {
+        case "文湖線":
+            CellLabel.backgroundColor = UIColor(red: 158/255.0, green: 101/255.0, blue: 46/255.0, alpha: 1)
+        case "淡水信義線":
+            CellLabel.backgroundColor = UIColor(red: 203/255.0, green: 44/255.0, blue: 48/255.0, alpha: 1)
+        case "新北投支線":
+            CellLabel.backgroundColor = UIColor(red: 248/255.0, green: 144/255.0, blue: 165/255.0, alpha: 1)
+        case "松山新店線":
+            CellLabel.backgroundColor = UIColor(red: 0/255.0, green: 119/255.0, blue: 73/255.0, alpha: 1)
+        case "小碧潭支線":
+            CellLabel.backgroundColor = UIColor(red: 206/255.0, green: 220/255.0, blue: 0/255.0, alpha: 1)
+        case "中和新蘆線":
+            CellLabel.backgroundColor = UIColor(red: 255/255.0, green: 163/255.0, blue: 0/255.0, alpha: 1)
+        case "板南線":
+            CellLabel.backgroundColor = UIColor(red: 0/255.0, green: 94/255.0, blue: 184/255.0, alpha: 1)
+        case "貓空纜車":
+            CellLabel.backgroundColor = UIColor(red: 119/255.0, green: 185/255.0, blue: 51/255.0, alpha: 1)
+        default:
+            break
+        }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,68 +49,59 @@ class MRTStationsListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
-        //return self.MRTStationsData.lines.count
+        return self.MRTStationsData.lines.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.MRTStationsData.lines[section].stations.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("StationCell", forIndexPath: indexPath) as! MyTableViewCell
+        let station = self.MRTStationsData.lines[indexPath.section].stations[indexPath.row]
+        cell.TitleLabel!.text = station.name
+        if station.lines!.count > 1 {
+            for stationName in station.lines!.keys {
+                if stationName == self.MRTStationsData.lines[indexPath.section].name {
+                    cell.LineNumberLabelL!.text = station.lines![stationName]
+                    cell.LineNumberLabelL.hidden = false
+                    LabelColor(stationName, CellLabel: cell.LineNumberLabelL)
+                }
+                else {
+                    cell.LineNumberLabelR!.text = station.lines![stationName]
+                    LabelColor(stationName, CellLabel: cell.LineNumberLabelR)
+                }
+            }
+        }
+        else {
+            cell.LineNumberLabelR!.text = station.lines![self.MRTStationsData.lines[indexPath.section].name!]
+            LabelColor(self.MRTStationsData.lines[indexPath.section].name!, CellLabel: cell.LineNumberLabelR)
+            cell.LineNumberLabelL.hidden = true
+        }
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.MRTStationsData.lines[section].name
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: - Segue
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let segueIdentifier = segue.identifier else {
+            return
+        }
+        
+        if segueIdentifier == "ShowDetail" {
+            guard let detailViewController = segue.destinationViewController as? StationDetailViewController else {
+                return
+            }
+            guard let cell = sender as? UITableViewCell else { return }
+            let indexPath = self.tableView.indexPathForCell(cell)!
+            let station = self.MRTStationsData.lines[indexPath.section].stations[indexPath.row]
+            detailViewController.station = station
+        }
     }
-    */
 
 }

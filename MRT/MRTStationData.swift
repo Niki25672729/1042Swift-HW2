@@ -36,34 +36,34 @@ struct MRTStationSource {
     let lines: [MRTLine]!
     
     init(contentsOfFile path: String) throws {
-        guard let rawData = NSArray(contentsOfFile: path) as? [NSDictionary] else {
-            throw MRTStationsSourceErrorType.FileNotFound
+        let jsonContent = try! String(contentsOfFile: path)
+        
+        guard let rawData = Mapper<Station>().mapArray(jsonContent) else {
+            throw MRTStationsSourceErrorType.InvalidContent
         }
         
         //LineName : [Station1, Station2, ...]
         var lineStationMap = [String : [Station]]()
         for stationDict in rawData {
-            guard let station = Mapper<Station>().map(stationDict) else {
-                throw MRTStationsSourceErrorType.InvalidContent
-            }
-            
-            for lineName in station.lines!.keys {
+            for lineName in stationDict.lines!.keys {
                 if lineStationMap[lineName] == nil {
                     lineStationMap[lineName] = []
                 }
-                lineStationMap[lineName]!.append(station)
+                lineStationMap[lineName]!.append(stationDict)
             }
             
         }
         
         var _lines = [MRTLine]()
-        for (lineName, stationsList) in lineStationMap {
+        for (lineName, stationslist) in lineStationMap {
+            let stationsList = stationslist.sort({ (StationA: Station, StationB: Station) -> Bool in
+                return StationA.lines![lineName] < StationB.lines![lineName]
+            })
             let line = MRTLine(name: lineName, stations: stationsList)
             _lines.append(line)
         }
         self.lines = _lines.sort { (lineA: MRTLine, lineB: MRTLine) -> Bool in
             return lineA.name < lineB.name
         }
-
     }
 }

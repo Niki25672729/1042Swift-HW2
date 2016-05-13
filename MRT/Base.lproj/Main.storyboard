@@ -16,20 +16,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StationCell" id="KQk-0V-dcS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StationCell" id="KQk-0V-dcS" customClass="MyTableViewCell" customModule="MRT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1010" contentMode="center" tableViewCell="KQk-0V-dcS" id="nwm-jS-2CM">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-0F-13z">
+                                        <label opaque="NO" multipleTouchEnabled="YES" tag="1000" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-0F-13z">
                                             <rect key="frame" x="17" y="0.0" width="31.5" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BR24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGB-8E-pfe">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1010" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BR24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGB-8E-pfe">
                                             <rect key="frame" x="500" y="8" width="58" height="26"/>
                                             <color key="backgroundColor" red="0.61960784313725492" green="0.396078431372549" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -46,7 +46,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BL23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-7S-nbf">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1020" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BL23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-7S-nbf">
                                             <rect key="frame" x="437" y="8" width="58" height="26"/>
                                             <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -75,7 +75,10 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="StationNameCell"/>
                                 <connections>
-                                    <segue destination="32z-Dr-WiD" kind="show" id="fL4-1J-LuH"/>
+                                    <outlet property="LineNumberLabelL" destination="bdb-7S-nbf" id="STz-7l-07i"/>
+                                    <outlet property="LineNumberLabelR" destination="TGB-8E-pfe" id="3Fx-xc-P9d"/>
+                                    <outlet property="TitleLabel" destination="H9E-0F-13z" id="4ym-0J-zXa"/>
+                                    <segue destination="32z-Dr-WiD" kind="show" identifier="ShowDetail" id="fL4-1J-LuH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -94,7 +97,7 @@
         <!--Station Detail-->
         <scene sceneID="FF5-Wc-1vg">
             <objects>
-                <viewController id="32z-Dr-WiD" userLabel="Station Detail" sceneMemberID="viewController">
+                <viewController id="32z-Dr-WiD" userLabel="Station Detail" customClass="StationDetailViewController" customModule="MRT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JcS-Zv-WJv"/>
                         <viewControllerLayoutGuide type="bottom" id="Ieb-sU-Za1"/>
@@ -120,16 +123,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東門" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-mo-kbh">
-                                <rect key="frame" x="209" y="78" width="182" height="101"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東門" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-mo-kbh">
+                                <rect key="frame" x="0.0" y="78" width="600" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="101" id="9qC-kF-agf"/>
-                                    <constraint firstAttribute="width" constant="182" id="SgZ-7g-08m"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="86"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文湖線" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-Dg-HnD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文湖線" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-Dg-HnD">
                                 <rect key="frame" x="0.0" y="193" width="600" height="66"/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.396078431372549" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
@@ -143,8 +145,10 @@
                             <constraint firstItem="MZz-RN-aif" firstAttribute="height" secondItem="IVa-Dg-HnD" secondAttribute="height" id="8Ca-Gl-xGF"/>
                             <constraint firstItem="F4l-mo-kbh" firstAttribute="bottom" secondItem="MZz-RN-aif" secondAttribute="top" constant="-14" id="Fgw-qF-5kS"/>
                             <constraint firstItem="IVa-Dg-HnD" firstAttribute="leading" secondItem="xt6-b3-auq" secondAttribute="leading" id="HVc-1o-frD"/>
+                            <constraint firstAttribute="trailing" secondItem="F4l-mo-kbh" secondAttribute="trailing" id="L4L-1m-rhJ"/>
                             <constraint firstItem="IVa-Dg-HnD" firstAttribute="baseline" secondItem="MZz-RN-aif" secondAttribute="baseline" id="Oky-8q-6kR"/>
                             <constraint firstItem="nuK-9y-RSX" firstAttribute="leading" secondItem="xt6-b3-auq" secondAttribute="leading" id="QZ4-Tt-wux"/>
+                            <constraint firstItem="F4l-mo-kbh" firstAttribute="leading" secondItem="xt6-b3-auq" secondAttribute="leading" id="Wq4-D7-CdL"/>
                             <constraint firstItem="MZz-RN-aif" firstAttribute="width" secondItem="nuK-9y-RSX" secondAttribute="width" id="bnC-Sq-Qpm"/>
                             <constraint firstItem="IVa-Dg-HnD" firstAttribute="firstBaseline" secondItem="MZz-RN-aif" secondAttribute="firstBaseline" id="eAA-5V-Czx"/>
                             <constraint firstAttribute="trailing" secondItem="IVa-Dg-HnD" secondAttribute="trailing" id="hcM-md-ARg"/>
@@ -156,6 +160,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="東門" id="HcF-2S-UZ5"/>
+                    <connections>
+                        <outlet property="LineNameLabelL" destination="nuK-9y-RSX" id="sL1-Kk-vNv"/>
+                        <outlet property="LineNameLabelM" destination="IVa-Dg-HnD" id="br8-g8-Clq"/>
+                        <outlet property="LineNameLabelR" destination="MZz-RN-aif" id="nwy-Yt-pgm"/>
+                        <outlet property="StationNameLabel" destination="F4l-mo-kbh" id="TIG-f7-Ki9"/>
+                        <outlet property="ViewNavgationTitle" destination="HcF-2S-UZ5" id="EnW-1c-mim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4A-lP-xFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
